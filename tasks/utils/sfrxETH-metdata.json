@@ -1,0 +1,6 @@
+{
+    "name": "Staked Frax Ether",
+    "symbol": "sfrxETH",
+    "description": "sfrxETH is a ERC-4626 vault designed to accrue the staking yield of the Frax ETH validators.",
+    "image": "https://arweave.net/NzSrBAbSwIvdNZYcZtGICAg-t_BI_B0ccDequjmkZ3w"
+}
