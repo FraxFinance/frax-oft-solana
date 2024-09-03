@@ -94,6 +94,10 @@ const config: HardhatUserConfig = {
         xlayer: {
             eid: EndpointId.XLAYER_V2_MAINNET,
             url: process.env.RPC_URL_XLAYER || 'https://rpc.xlayer.tech',
+        },
+        arbitrum: {
+            eid: EndpointId.ARBITRUM_V2_MAINNET,
+            url: process.env.RPC_URL_ARBITRUM || 'https://arb1.drpc.org',
         }
     },
     namedAccounts: {

@@ -264,6 +264,7 @@ const config: OAppOmniGraphHardhat = {
                         maxMessageSize: 10000,
                     },
                     ulnConfig: {
+                        confirmations: BigInt(32),
                         optionalDVNThreshold: 0,
                         requiredDVNs: [lzDVNConfigAccount.toString(), horizenDVNConfigAccount.toString()],
                         optionalDVNs: [],
@@ -271,6 +272,7 @@ const config: OAppOmniGraphHardhat = {
                 },
                 receiveConfig: {
                     ulnConfig: {
+                        confirmations: BigInt(5),
                         optionalDVNThreshold: 0,
                         requiredDVNs: [lzDVNConfigAccount.toString(), horizenDVNConfigAccount.toString()],
                         optionalDVNs: [],

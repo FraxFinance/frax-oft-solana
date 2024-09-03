@@ -66,7 +66,7 @@ task('lz:solana:oft:init', 'Initializes different Endpoint configuration account
         console.log(`⚙️ Initializing configuration accounts for Solana to EVM...`)
 
         // Reads each configuration specified in the solana.config.ts where the 'from' chain is solana
-        for (const peer of solanaConfig.connections) {
+        for (const peer of solanaConfig.connections ) {
             // uses the hardhat runtime to get the evm contract address from deployments to initialize as the peer account on solana
             try {
                 const getHreByEid = createGetHreByEid()
