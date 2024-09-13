@@ -1,5 +1,6 @@
 import './common/wire'
 import './solana/initOFT'
+import './solana/burnInboundMessage'
 import './solana/createFraxOFT'
 import './solana/createFraxEtherOFT'
 import './solana/createFraxSharesOFT'

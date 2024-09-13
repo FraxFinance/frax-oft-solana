@@ -122,6 +122,7 @@ const config: OAppOmniGraphHardhat = {
                 },
                 receiveConfig: {
                     ulnConfig: {
+                        confirmations: 0,
                         optionalDVNThreshold: 0,
                         requiredDVNs: [lzDVNConfigAccount.toString(), horizenDVNConfigAccount.toString()],
                         optionalDVNs: [],
@@ -165,6 +166,7 @@ const config: OAppOmniGraphHardhat = {
                         maxMessageSize: 10000,
                     },
                     ulnConfig: {
+                        confirmations: 0,
                         optionalDVNThreshold: 0,
                         requiredDVNs: [lzDVNConfigAccount.toString(), horizenDVNConfigAccount.toString()],
                         optionalDVNs: [],
@@ -172,6 +174,7 @@ const config: OAppOmniGraphHardhat = {
                 },
                 receiveConfig: {
                     ulnConfig: {
+                        confirmations: 0,
                         optionalDVNThreshold: 0,
                         requiredDVNs: [lzDVNConfigAccount.toString(), horizenDVNConfigAccount.toString()],
                         optionalDVNs: [],
@@ -215,6 +218,7 @@ const config: OAppOmniGraphHardhat = {
                         maxMessageSize: 10000,
                     },
                     ulnConfig: {
+                        confirmations: 0,
                         optionalDVNThreshold: 0,
                         requiredDVNs: [lzDVNConfigAccount.toString(), horizenDVNConfigAccount.toString()],
                         optionalDVNs: [],
@@ -222,6 +226,7 @@ const config: OAppOmniGraphHardhat = {
                 },
                 receiveConfig: {
                     ulnConfig: {
+                        confirmations: 0,
                         optionalDVNThreshold: 0,
                         requiredDVNs: [lzDVNConfigAccount.toString(), horizenDVNConfigAccount.toString()],
                         optionalDVNs: [],
@@ -265,6 +270,7 @@ const config: OAppOmniGraphHardhat = {
                         maxMessageSize: 10000,
                     },
                     ulnConfig: {
+                        confirmations: 0,
                         optionalDVNThreshold: 0,
                         requiredDVNs: [lzDVNConfigAccount.toString(), horizenDVNConfigAccount.toString()],
                         optionalDVNs: [],
@@ -272,7 +278,7 @@ const config: OAppOmniGraphHardhat = {
                 },
                 receiveConfig: {
                     ulnConfig: {
-                        confirmations: BigInt(5),
+                        confirmations: BigInt(0),
                         optionalDVNThreshold: 0,
                         requiredDVNs: [lzDVNConfigAccount.toString(), horizenDVNConfigAccount.toString()],
                         optionalDVNs: [],
@@ -316,6 +322,7 @@ const config: OAppOmniGraphHardhat = {
                         maxMessageSize: 10000,
                     },
                     ulnConfig: {
+                        confirmations: 0,
                         optionalDVNThreshold: 0,
                         requiredDVNs: [lzDVNConfigAccount.toString(), horizenDVNConfigAccount.toString()],
                         optionalDVNs: [],
@@ -323,6 +330,7 @@ const config: OAppOmniGraphHardhat = {
                 },
                 receiveConfig: {
                     ulnConfig: {
+                        confirmations: 0,
                         optionalDVNThreshold: 0,
                         requiredDVNs: [lzDVNConfigAccount.toString(), horizenDVNConfigAccount.toString()],
                         optionalDVNs: [],
@@ -366,6 +374,7 @@ const config: OAppOmniGraphHardhat = {
                         maxMessageSize: 10000,
                     },
                     ulnConfig: {
+                        confirmations: 0,
                         optionalDVNThreshold: 0,
                         requiredDVNs: [lzDVNConfigAccount.toString(), horizenDVNConfigAccount.toString()],
                         optionalDVNs: [],
@@ -373,6 +382,7 @@ const config: OAppOmniGraphHardhat = {
                 },
                 receiveConfig: {
                     ulnConfig: {
+                        confirmations: 0,
                         optionalDVNThreshold: 0,
                         requiredDVNs: [lzDVNConfigAccount.toString(), horizenDVNConfigAccount.toString()],
                         optionalDVNs: [],
@@ -416,6 +426,7 @@ const config: OAppOmniGraphHardhat = {
                         maxMessageSize: 10000,
                     },
                     ulnConfig: {
+                        confirmations: 0,
                         optionalDVNThreshold: 0,
                         requiredDVNs: [lzDVNConfigAccount.toString(), horizenDVNConfigAccount.toString()],
                         optionalDVNs: [],
@@ -423,6 +434,7 @@ const config: OAppOmniGraphHardhat = {
                 },
                 receiveConfig: {
                     ulnConfig: {
+                        confirmations: 0,
                         optionalDVNThreshold: 0,
                         requiredDVNs: [lzDVNConfigAccount.toString(), horizenDVNConfigAccount.toString()],
                         optionalDVNs: [],
@@ -466,6 +478,7 @@ const config: OAppOmniGraphHardhat = {
                         maxMessageSize: 10000,
                     },
                     ulnConfig: {
+                        confirmations: 0,
                         optionalDVNThreshold: 0,
                         requiredDVNs: [lzDVNConfigAccount.toString(), horizenDVNConfigAccount.toString()],
                         optionalDVNs: [],
@@ -473,6 +486,7 @@ const config: OAppOmniGraphHardhat = {
                 },
                 receiveConfig: {
                     ulnConfig: {
+                        confirmations: 0,
                         optionalDVNThreshold: 0,
                         requiredDVNs: [lzDVNConfigAccount.toString(), horizenDVNConfigAccount.toString()],
                         optionalDVNs: [],

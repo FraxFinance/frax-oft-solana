@@ -103,6 +103,8 @@ task('lz:oft:solana:send', 'Send tokens from Solana to a target EVM chain')
         const deriver = new OftPDADeriver(oftProgramId)
         const [peerAddress] = deriver.peer(oftConfigPda, destinationEid)
         const peerInfo = await OftProgram.accounts.Peer.fromAccountAddress(connection, peerAddress)
+        console.log(`Peer address: ${Buffer.from(peerInfo.address).toString('hex')}`);
+
 
         // Set up send helper and convert recipient address to bytes32
         const sendHelper = new SendHelper()
@@ -111,6 +113,7 @@ task('lz:oft:solana:send', 'Send tokens from Solana to a target EVM chain')
         // Quote the fee for the cross-chain transfer
         const feeQuote = await OftTools.quoteWithUln(
             connection,
+            oftProgramId, // OFT Program
             keypair.publicKey,
             mintPublicKey,
             destinationEid,
@@ -129,8 +132,9 @@ task('lz:oft:solana:send', 'Send tokens from Solana to a target EVM chain')
                 destinationEid,
                 hexlify(peerInfo.address)
             ),
-            TOKEN_PROGRAM_ID, // SPL Token Program
-            oftProgramId // OFT Program
+            undefined,
+            undefined,
+            TOKEN_PROGRAM_ID // SPL Token Program
         )
 
         console.log(feeQuote)
@@ -138,22 +142,29 @@ task('lz:oft:solana:send', 'Send tokens from Solana to a target EVM chain')
         // Create the instruction for sending tokens
         const sendInstruction = await OftTools.sendWithUln(
             connection,
+            oftProgramId, // OFT Program
             keypair.publicKey, // payer
             mintPublicKey, // tokenMint
             toWeb3JsPublicKey(tokenAccount[0]), // tokenSource
             destinationEid,
             BigInt(amount),
             (BigInt(amount) * BigInt(9)) / BigInt(10),
-            Options.newOptions().addExecutorLzReceiveOption(0, 0).toBytes(),
+            Options.newOptions().addExecutorLzReceiveOption(0, 0).toBytes(), // extraOptions (empty)
             Array.from(recipientAddressBytes32),
             feeQuote.nativeFee,
             undefined, // payInZRO
             undefined,
             undefined,
             peerInfo.address,
+            await sendHelper.getSendAccounts(
+                connection,
+                keypair.publicKey,
+                oftConfigPda,
+                destinationEid,
+                hexlify(peerInfo.address)
+            ),
             undefined,
             TOKEN_PROGRAM_ID, // SPL Token Program
-            oftProgramId // OFT Program
         )
 
         // Convert the instruction and create the transaction builder
